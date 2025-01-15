@@ -1,0 +1,15 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.post {
+    margin-bottom: 30px;
+}
+
+.post h2 {
+    color: #007bff;
+}
+
+.post p {
+    font-size: 1.2em;
+}
