@@ -39,10 +39,17 @@ app.get('/admin', (req, res) => {
 // Admin Panelinden Blog Yazısı Eklemek
 app.post('/admin', (req, res) => {
     const { title, content } = req.body;
+
+    const today = new Date();
+    const day = today.getDate();
+    const month = today.getMonth() + 1; // Aylar sıfırdan başladığı iiçin 1 eklendi
+    const year = today.getFullYear();
+    const allDay = day + "." + month + "." + year
+
     const newPost = {
         title,
         content,
-        date: new Date().toISOString()
+        date: allDay
     };
 
     const posts = readBlogPosts();
